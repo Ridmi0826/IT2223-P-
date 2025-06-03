@@ -1,0 +1,21 @@
+ x = input('Enter your number: ');
+
+function factorial = fac(x)
+    if x < 0
+        error('Invalid number. Factorial is not defined for negative numbers.');
+    elseif x == 0 || x == 1
+        factorial = 1;
+    else
+        factorial = x * fac(x - 1);
+    end
+end
+
+result = fac(x);
+fprintf('Factorial of %d is %d\n', x, result);
+
+%function f = fact(n)
+%ifn==0 || n==1
+%f=1;
+%else
+    %f = n*fact(n-1);
+    %end
